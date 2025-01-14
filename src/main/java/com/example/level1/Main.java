@@ -18,7 +18,7 @@ public class Main {
             System.out.print("> 메뉴 선택: ");
             int num = sc.nextInt();
 
-            if(num < 0 || num > 4) {
+            if (num < 0 || num > 4) {
                 System.out.println("잘못된 입력입니다. 0~4 사이의 숫자를 입력해주세요.\n");
                 continue;
             }

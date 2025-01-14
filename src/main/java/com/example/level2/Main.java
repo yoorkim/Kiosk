@@ -26,7 +26,7 @@ public class Main {
             System.out.print("> 메뉴 선택: ");
             int num = sc.nextInt();
 
-            if(num < 0 || num > menuItems.size()) {
+            if (num < 0 || num > menuItems.size()) {
                 System.out.println("잘못된 입력입니다. 다시 입력해주세요.\n");
                 continue;
             }
