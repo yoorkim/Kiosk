@@ -18,7 +18,7 @@ public class Kiosk {
 
         while (proceed) {
             // 상위 카테고리 메뉴 출력
-            System.out.println("[ Main MENU ]");
+            System.out.println("[ MAIN MENU ]");
             for (int i = 0; i < categoryMenu.size(); i++) {
                 System.out.println((i+1) + ". " + categoryMenu.get(i).getCategory());
             }
@@ -37,16 +37,13 @@ public class Kiosk {
                     System.out.println("프로그램을 종료합니다.");
                     proceed = false;
                     break;
-                case 1:
-                case 2:
-                case 3:
-                case 4:
+                default:
                     menu = categoryMenu.get(categoryNum-1);
                     boolean proceed2 = true;
                     while (proceed2) {
                         // 카테고리별 메뉴 출력
                         System.out.println();
-                        System.out.println("[ " + menu.getCategory() + " MENU ]");
+                        System.out.println("[ " + menu.getCategory().toUpperCase() + " MENU ]");
                         menu.printMenuItems();  // 카테고리에 맞는 메뉴 리스트 출력
                         System.out.println("0. 뒤로가기");
                         System.out.print("> 메뉴 선택: ");
