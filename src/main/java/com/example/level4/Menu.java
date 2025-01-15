@@ -23,8 +23,7 @@ public class Menu {
     public void printMenuItems() {
         for (int i = 0; i < menuItems.size(); i++) {
             String menu = String.format("%-16s", menuItems.get(i).menu);  // 문자열 간격 맞추기
-            System.out.println((i+1) + ". " + menu + "| W "
-                    + menuItems.get(i).price + " | " + menuItems.get(i).menuInfo);
+            System.out.printf("%d. %s| W %.2f | %s\n", i+1, menu, menuItems.get(i).price, menuItems.get(i).menuInfo);
         }
     }
 }

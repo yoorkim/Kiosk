@@ -109,15 +109,13 @@ public class Kiosk {
                                 default:
                                     MenuItem selected = menu.getMenuItems().get(menuNum-1);  // 선택한 메뉴 저장
                                     // 선택한 메뉴 정보 출력
-                                    System.out.println("선택한 메뉴: " + selected.getMenu() + "\t| W "
-                                            + selected.getPrice() + " | " + selected.getMenuInfo());
+                                    System.out.printf("선택한 메뉴: %s | W %.2f | %s\n", selected.getMenu(), selected.getPrice(), selected.getMenuInfo());
 
                                     while (true) {
                                         try {
                                             // 장바구니 추가 선택
                                             System.out.println();
-                                            System.out.println("\"" + selected.getMenu() + " | W "
-                                                    + selected.getPrice() + " | " + selected.getMenuInfo() + "\"");
+                                            System.out.printf("\"%s | W %.2f | %s\"\n", selected.getMenu(), selected.getPrice(), selected.getMenuInfo());
                                             System.out.println("위 메뉴를 장바구니에 추가하시겠습니까?");
                                             System.out.println("1. 확인\t\t\t 2. 취소");
                                             int cartNum = sc.nextInt();

@@ -36,12 +36,8 @@ public class Main {
                     System.out.println("프로그램을 종료합니다.");
                     proceed = false;
                     break;
-                case 1:
-                case 2:
-                case 3:
-                case 4:
-                    System.out.println("선택한 메뉴: " + menuItems.get(num-1).menu + "\t| W "
-                            + menuItems.get(num-1).price + " | " + menuItems.get(num-1).menuInfo);
+                default:
+                    System.out.printf("선택한 메뉴: %s | W %.2f | %s\n", menuItems.get(num-1).menu, menuItems.get(num-1).price, menuItems.get(num-1).menuInfo);
                     break;
             }
             System.out.println();

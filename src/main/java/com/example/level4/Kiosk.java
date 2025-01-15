@@ -60,9 +60,9 @@ public class Kiosk {
                                 proceed2 = false;
                                 break;
                             default:
+                                MenuItem selected = menu.getMenuItems().get(menuNum-1);  // 선택한 메뉴 저장
                                 // 선택한 메뉴 정보 출력
-                                System.out.println("선택한 메뉴: " + menu.getMenuItems().get(menuNum-1).menu + "\t| W "
-                                        + menu.getMenuItems().get(menuNum-1).price + " | " + menu.getMenuItems().get(menuNum-1).menuInfo);
+                                System.out.printf("선택한 메뉴: %s | W %.2f | %s\n", selected.menu, selected.price, selected.menuInfo);
                                 break;
                         }
                     }
