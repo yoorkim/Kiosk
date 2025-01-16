@@ -16,7 +16,7 @@ public class Menu {
         return category;
     }
 
-    // MenuItem List를 반환하는 메서드
+    // MenuItem List 를 반환하는 메서드
     public List<MenuItem> getMenuItems() {
         return menuItems;
     }
@@ -26,14 +26,15 @@ public class Menu {
         this.category = category;
     }
 
-    // List에 들어있는 MenuItem을 순차적으로 보여주는 메서드
+    // List 에 들어있는 MenuItem 을 순차적으로 보여주는 메서드
     public void printMenuItems() {
         System.out.println();
         System.out.println("[ " + category.toUpperCase() + " MENU ]");
-        for (int i = 0; i < menuItems.size(); i++) {
-            String menu = String.format("%-16s", menuItems.get(i).getMenu());  // 문자열 간격 맞추기
-            System.out.printf("%d. %s| W %.2f | %s\n", i+1, menu, menuItems.get(i).getPrice(), menuItems.get(i).getPrice());
-        }
+        menuItems.stream()
+                .forEach(menuItem -> {
+                    System.out.printf("%d. %-16s| W %.2f | %s\n",
+                            menuItems.indexOf(menuItem) + 1, menuItem.getMenu(), menuItem.getPrice(), menuItem.getMenuInfo());
+                });
         System.out.println("0. 뒤로가기");
     }
 }
